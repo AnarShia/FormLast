@@ -1,0 +1,26 @@
+﻿@using FormLast.Components
+@{
+    ViewData["Title"] = "Home Page";
+ 
+}
+
+
+@await Html.PartialAsync("_Form",new ViewDataDictionary(ViewData){
+    {"ComponentList",null},
+    {"label",""}
+})
+@{
+    List<Task> components = new List<Task>();
+    components.Add(Component.InvokeAsync("InputTextArea", new InputTextAreaModel("Password", "CagriKaraca")));
+    components.Add(Component.InvokeAsync("InputTextArea", new InputTextAreaModel("Password", "CagriKaraca")));
+    components.Add(Component.InvokeAsync("InputTextArea", new InputTextAreaModel("Password", "CagriKaraca")));
+    components.Add(Component.InvokeAsync("InputTextArea", new InputTextAreaModel("Password", "CagriKaraca")));
+    components.Add(Component.InvokeAsync("InputTextArea", new InputTextAreaModel("Password", "CagriKaraca")));
+    components.Add(Component.InvokeAsync("InputTextArea", new InputTextAreaModel("Password", "CagriKaraca")));
+}
+
+@Html.Partial("_Form",new ViewDataDictionary(ViewData){
+    {"ComponentList",components }, {"label",""}
+})
+
+    @await HelloWorldViewComponent.

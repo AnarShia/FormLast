@@ -1,0 +1,14 @@
+﻿@using FormLast.Components
+@model InputTextAreaModel
+
+@{
+    var modelId = Model.Id;
+    var modelName = Model.Name;
+    var modelType = Model.Type;
+}
+<div class="form-group">
+                <label class="control-label">@modelName</label>
+                <input class="form-control" id="@modelId" name="@modelName" type="@modelType" value=""> 
+                <span  class="text-danger"></span>
+</div>
+

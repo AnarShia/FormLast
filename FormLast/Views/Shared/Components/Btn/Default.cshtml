@@ -1,0 +1,12 @@
+﻿@using FormLast.Components
+@model BtnModel
+@{
+
+    var modelClass = Model.Class;
+    var modelType = Model.Type;
+    var modelValue = Model.Value;
+}
+
+ <div class="@modelClass">
+                <input type = "@modelType" value="@modelValue" class="btn btn-primary" />
+ </div>

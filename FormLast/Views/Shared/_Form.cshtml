@@ -1,0 +1,29 @@
+﻿@using FormLast.Components
+@using Microsoft.AspNetCore.Html
+@{
+
+
+
+    List<Task> items = ViewData["ComponentList"] as List<Task>;
+
+
+}
+
+
+@ViewData["ComponentList"]
+<form>
+    @{
+        if (items != null)
+        {
+
+            @foreach (Task<IHtmlContent> item  in items)
+            {
+                var a = await item;
+                @a
+            }
+
+
+        }
+    }
+
+</form>
